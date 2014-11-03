@@ -62,8 +62,8 @@ public OnPluginStart()
 #if defined _CustomPlayerSkins_included
 	AdminESP_Mode    = CreateConVar("sm_csgo_adminesp_mode",    "0",             "Determines a glow mode for Admin ESP:\n0 = Red glow (old)\n1 = Colored glow (might be cpu intensive!)",  FCVAR_PLUGIN, true, 0.0, true, 1.0);
 	AdminESP_Dead    = CreateConVar("sm_csgo_adminesp_dead",    "1",             "Sets when automatically enable colored glow:\n0 = Enable ESP on spawning\n1 = Enable in observing mode", FCVAR_PLUGIN, true, 0.0, true, 1.0);
-	AdminESP_TColor  = CreateConVar("sm_csgo_adminesp_tcolor",  "192 160 96 64", "Determines R G B A glow colors for Terrorists team\nSet to \"0 0 0 0\" to disable",                      FCVAR_PLUGIN);
-	AdminESP_CTColor = CreateConVar("sm_csgo_adminesp_ctcolor", "96 128 192 64", "Determines R G B A glow colors for Counter-Terrorists team\nFormat should be \"R G B A\" (with spaces)", FCVAR_PLUGIN);
+	AdminESP_TColor  = CreateConVar("sm_csgo_adminesp_tcolor",  "255 0 0 64", "Determines R G B A glow colors for Terrorists team\nSet to \"0 0 0 0\" to disable",                      FCVAR_PLUGIN);
+	AdminESP_CTColor = CreateConVar("sm_csgo_adminesp_ctcolor", "0 0 255 64", "Determines R G B A glow colors for Counter-Terrorists team\nFormat should be \"R G B A\" (with spaces)", FCVAR_PLUGIN);
 #endif
 	// Command to toggle Admin ESP
 	RegConsoleCmd("sm_esp", Command_ToggleESP, "Toggles glow on all players for users with \"csgo_admin_esp_cmd\" override access");
